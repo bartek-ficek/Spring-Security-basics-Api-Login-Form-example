@@ -16,7 +16,9 @@ public class QuotationApi {
         quotations.add(new Quotation("The way to get started is to quit talking and begin doing.","Walt Disney"));
     }
 
-    @GetMapping("/api")
+//    Possibility of use @GetMapping and @RequestMapping interchangeably. Result is the same below.
+//    @GetMapping("/api")
+    @RequestMapping(method = RequestMethod.GET, value = "/api")
     public List<Quotation> getQuotationList() {
         return quotations;
     }
